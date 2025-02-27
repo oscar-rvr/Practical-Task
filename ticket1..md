@@ -1,3 +1,4 @@
+## Ticket
 Configuración de PostgreSQL con Docker
 
 Este documento explica cómo configurar una base de datos PostgreSQL en Docker, solucionar problemas comunes y conectarse desde la terminal o DBeaver.
@@ -10,12 +11,12 @@ DBeaver (opcional, para conectarse visualmente).
 
 Instalación y configuración
 
-🔹 ** 1 Clonar el repositorio y entrar en la carpeta del proyecto**
+🔹 **1 Clonar el repositorio y entrar en la carpeta del proyecto**
 
 git clone <URL_DEL_REPO>
 cd inventory-database
 
-🔹 ** 2 Crear un archivo .env con las credenciales**
+🔹 **2 Crear un archivo .env con las credenciales**
 
 touch .env
 nano .env
@@ -29,7 +30,7 @@ POSTGRES_PORT=5432
 
 Guarda y cierra (CTRL + X, Y, Enter).
 
-🔹 ** 3 Configurar docker-compose.yml**
+🔹 **3 Configurar docker-compose.yml**
 
 touch docker-compose.yml
 nano docker-compose.yml
@@ -61,7 +62,7 @@ volumes:
 
 Guarda y cierra (CTRL + X, Y, Enter).
 
-🔹 ** 4 Levantar el contenedor con Docker**
+🔹 **4 Levantar el contenedor con Docker**
 
 docker-compose up -d
 
@@ -69,7 +70,7 @@ Para verificar que el contenedor está corriendo:
 
 docker ps
 
-🔹 ** 5 Conectarse a la base de datos**
+🔹 **5 Conectarse a la base de datos**
 ✅ Desde la terminal:
 
 psql -h localhost -p 5432 -U admin -d inventory_db
